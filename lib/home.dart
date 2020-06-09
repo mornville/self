@@ -1,57 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:self/widgets.dart' as widgets;
 import 'addQuickAccessApps.dart' as af;
-
-List topApps = [
-  [
-    'Flipkart',
-    'https://www.flipkart.com/',
-    'flipkart.png',
-    'Arround 200 million registered users.'
-  ],
-  [
-    'Inshorts',
-    'https://inshorts.com/en/read',
-    'inshorts.png',
-    'Around 1 million readers every month.',
-  ],
-  [
-    'Facebook',
-    'https://www.facebook.com/',
-    'facebook.png',
-    'Number of active users per month: 1.59 billion approximately',
-  ],
-  [
-    'Gmail',
-    'https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin',
-    'gmail.png',
-    'Number of active users per month: 1 billion approximately',
-  ],
-  [
-    'Instagram',
-    'http://www.instagram.com/',
-    'instagram.png',
-    'Number of active users per month: 400 million approximately',
-  ],
-  [
-    'Youtube',
-    'http://youtube.com/',
-    'youtube.png',
-    'Number of active users per month: 2 billion approximately'
-  ],
-  [
-    'Cricbuzz',
-    'https://www.cricbuzz.com/',
-    'cricbuzz.png',
-    'Around 13 million total users.'
-  ],
-  [
-    'Amazon',
-    'https://www.amazon.in/',
-    'amazon.png',
-    'Around 150 million registered users.'
-  ],
-];
+import 'package:self/data.dart';
 
 List favourites = [];
 

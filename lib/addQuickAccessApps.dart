@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:self/appList.dart' as appList;
 
 class AddFavourite extends StatefulWidget {
   @override
@@ -6,6 +7,8 @@ class AddFavourite extends StatefulWidget {
 }
 
 class _AddFavouriteState extends State<AddFavourite> {
+  bool showTopSearches = false;
+  var topSearches = List<Widget>();
   TextEditingController searchBarContent = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,12 @@ class _AddFavouriteState extends State<AddFavourite> {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.only(top: 20.0),
-                    child: TextField(
+                    child: TextFormField(
+                      onTap: () {
+                        setState(() {
+                          showTopSearches = true;
+                        });
+                      },
                       decoration: InputDecoration(
                         hintText: "Search",
                         fillColor: Colors.white,
@@ -35,7 +43,13 @@ class _AddFavouriteState extends State<AddFavourite> {
                             horizontal: 16.0, vertical: 16.0),
                       ),
                     ),
-                  )
+                  ),
+                  showTopSearches
+                      ? Padding(
+                          child: Container(height: 100, color: Colors.black12),
+                          padding: EdgeInsets.all(0.0),
+                        )
+                      : Container(),
                 ],
               ),
             )));
