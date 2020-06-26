@@ -33,6 +33,11 @@ class _DashboardState extends State<Dashboard> {
                     title: Text("Social Apps"),
                     subtitle: Text("Facebook, Instagram, Telegram and more."),
                     trailing: Icon(Icons.swap_horizontal_circle),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/appList', arguments: {
+                        "category": "social"
+                      });
+                    },
                   ),
                 ),
                  Card(
@@ -40,6 +45,11 @@ class _DashboardState extends State<Dashboard> {
                     title: Text("Shopping Apps"),
                     subtitle: Text("Flipkart, Snapdeal, Amazon and more."),
                     trailing: Icon(Icons.card_travel),
+                       onTap: (){
+                      Navigator.pushNamed(context, '/appList', arguments: {
+                        "category": "shopping"
+                      });
+                    },
                   ),
                   
                 ),
@@ -48,6 +58,11 @@ class _DashboardState extends State<Dashboard> {
                     title: Text("Sports"),
                     subtitle: Text("Cricbuzz, Espn and more."),
                     trailing: Icon(Icons.slow_motion_video),
+                       onTap: (){
+                      Navigator.pushNamed(context, '/appList', arguments: {
+                        "category": "sports"
+                      });
+                    },
                   ),
                 ),
                  Card(
@@ -55,6 +70,11 @@ class _DashboardState extends State<Dashboard> {
                     title: Text("News"),
                     subtitle: Text("CNN, NDTV and more."),
                     trailing: Icon(Icons.new_releases),
+                       onTap: (){
+                      Navigator.pushNamed(context, '/appList', arguments: {
+                        "category": "news"
+                      });
+                    },
                   ),
                 ),
               ],
