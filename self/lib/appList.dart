@@ -56,6 +56,7 @@ class _AppListState extends State<AppList> {
     final Map data = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text(data['category'] == 'social'
             ? 'Social Apps'
             : data['category'] == 'news'
