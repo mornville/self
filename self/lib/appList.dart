@@ -40,6 +40,13 @@ class _AppListState extends State<AppList> {
                 child: Padding(
                   padding: EdgeInsets.all(10.0),
                   child: ListTile(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/appScreen', arguments: {
+                        "appName": item[0].toString(),
+                        "appUrl": item[1].toString(),
+                        "appLogo": item[2].toString(),
+                      });
+                    },
                     title: Padding(
                       padding: EdgeInsets.all(5.0),
                       child: Text(

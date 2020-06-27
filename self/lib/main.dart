@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:self/home.dart' as home;
 import 'package:self/appList.dart' as appList;
+import 'package:self/appScreen.dart' as appScreen;
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         child: home.Dashboard(),
       ),
       routes: {
+        '/appScreen': (context) => appScreen.AppScreen(),
         '/appList': (context) => appList.AppList(),
       },
     );
