@@ -52,13 +52,6 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  TextEditingController _searchview = TextEditingController();
-
-  Icon customIcon = Icon(Icons.search);
-  Widget customSearchBar = Text(
-    'SELF - An all in one App',
-    style: TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.w700),
-  );
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -70,127 +63,131 @@ class _DashboardState extends State<Dashboard> {
           }
         },
         child: Scaffold(
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
+            floatingActionButton: FloatingActionButton.extended(
+              elevation: 4.0,
+              label: Text(
+                'About the Dev.',
+                style: TextStyle(fontFamily: 'OpenSans', letterSpacing: 0.0),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, '/reportHealth');
+              },
+            ),
+            bottomNavigationBar: BottomAppBar(
+              elevation: 10.0,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  FlatButton(
+                    onPressed: () {},
+                    child: Padding(
+                        child: Image.asset(
+                          'assets/info.png',
+                          height: 30.0,
+                        ),
+                        padding: EdgeInsets.only(
+                            top: 8.0, left: 0.0, right: 8.0, bottom: 10.0)),
+                  ),
+                  FlatButton(
+                    onPressed: () {},
+                    child: Padding(
+                        child: Image.asset(
+                          'assets/favourite.png',
+                          height: 30.0,
+                        ),
+                        padding: EdgeInsets.only(
+                            top: 8.0, left: 8.0, right: 0.0, bottom: 10.0)),
+                  ),
+                ],
+              ),
+            ),
             body: NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              new SliverAppBar(
-                pinned: true,
-                centerTitle: true,
-                // actions: <Widget>[
-                //   IconButton(
-                //     icon: customIcon,
-                //     onPressed: () {
-                //       setState(() {
-                //         if (this.customIcon.icon == Icons.search) {
-                //           this.customIcon = Icon(Icons.cancel);
-                //           this.customSearchBar = TextField(
-                //             autofocus: true,
-                //             cursorColor: Colors.white,
-                //             style: TextStyle(
-                //                 fontSize: 14.0,
-                //                 color: Colors.white,
-                //                 fontFamily: 'Raleway',
-                //                 fontWeight: FontWeight.w500),
-                //             controller: _searchview,
-                //             decoration: InputDecoration(
-                //               border: InputBorder.none,
-
-                //               hintText: "Enter App Name",
-                //               hintStyle: TextStyle(
-                //                   fontSize: 14.0,
-                //                   color: Colors.white,
-                //                   fontFamily: 'Raleway',
-                //                   fontWeight: FontWeight.w500),
-                //               fillColor: Colors.white,
-
-                //               //fillColor: Colors.green
-                //             ),
-                //           );
-                //         } else {
-                //           customIcon = Icon(Icons.search);
-                //           customSearchBar = Text(
-                //             'SELF - An all in one App',
-                //             style: TextStyle(
-                //                 fontFamily: 'OpenSans',
-                //                 fontWeight: FontWeight.w700),
-                //           );
-                //         }
-                //       });
-                //     },
-                //   ),
-                // ],
-                // titleSpacing: 10.0,
-                title: customSearchBar,
-                flexibleSpace: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: <Color>[
-                            Color.fromRGBO(9, 9, 9, 1),
-                            Color.fromRGBO(19, 19, 19, 1),
-                            Color.fromRGBO(26, 26, 26, 1),
-                          ])),
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) {
+                return <Widget>[
+                  new SliverAppBar(
+                    pinned: true,
+                    centerTitle: true,
+                    title: Text(
+                      'SELF - An All in One App',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    flexibleSpace: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: <Color>[
+                                Color.fromRGBO(9, 9, 9, 1),
+                                Color.fromRGBO(19, 19, 19, 1),
+                                Color.fromRGBO(26, 26, 26, 1),
+                              ])),
+                    ),
+                  ),
+                ];
+              },
+              body: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: ListView(
+                  children: <Widget>[
+                    Padding(
+                        child: Text(
+                          'MOST USED APPS',
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15.0),
+                        ),
+                        padding: EdgeInsets.only(left: 10.0, bottom: 5.0)),
+                    Container(
+                      height: 120.0,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: social.length,
+                        itemBuilder: (context, i) {
+                          return Container(
+                              width: 80.0,
+                              child: widgets.appIconCard(
+                                  social[i][0], social[i][2], social[i][2]));
+                        },
+                      ),
+                    ),
+                    Padding(
+                        child: Text(
+                          'SELECT A CATEGORY',
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15.0),
+                        ),
+                        padding: EdgeInsets.only(
+                            top: 15.0, left: 10.0, bottom: 10.0)),
+                    widgets.categoryCard(
+                        'Social Media',
+                        "Facebook, Instagram, Telegram and more.",
+                        'a',
+                        'social',
+                        context),
+                    widgets.categoryCard(
+                        'Shopping Apps',
+                        "Flipkart, Snapdeal, Amazon and more.",
+                        'a',
+                        'shopping',
+                        context),
+                    widgets.categoryCard('Sports', "Cricbuzz, Espn and more.",
+                        'a', 'sports', context),
+                    widgets.categoryCard(
+                        'News', "CNN, NDTV and more.", 'a', 'news', context),
+                  ],
                 ),
               ),
-            ];
-          },
-          body: Padding(
-            padding: EdgeInsets.all(8.0),
-            child: ListView(
-              children: <Widget>[
-                Padding(
-                    child: Text(
-                      'Most Used Apps',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 20.0),
-                    ),
-                    padding: EdgeInsets.only(left: 10.0, bottom: 10.0)),
-                Container(
-                  height: 120.0,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: social.length,
-                    itemBuilder: (context, i) {
-                      return Container(
-                          width: 80.0,
-                          child: widgets.appIconCard(
-                              social[i][0], social[i][2], social[i][2]));
-                    },
-                  ),
-                ),
-                Padding(
-                    child: Text(
-                      'Select Category',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 20.0),
-                    ),
-                    padding:
-                        EdgeInsets.only(top: 20.0, left: 10.0, bottom: 10.0)),
-                widgets.categoryCard(
-                    'Social Media',
-                    "Facebook, Instagram, Telegram and more.",
-                    'a',
-                    'social',
-                    context),
-                widgets.categoryCard(
-                    'Shopping Apps',
-                    "Flipkart, Snapdeal, Amazon and more.",
-                    'a',
-                    'shopping',
-                    context),
-                widgets.categoryCard('Sports', "Cricbuzz, Espn and more.", 'a',
-                    'sports', context),
-                widgets.categoryCard(
-                    'News', "CNN, NDTV and more.", 'a', 'news', context),
-              ],
-            ),
-          ),
-        )));
+            )));
   }
 }
