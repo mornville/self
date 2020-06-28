@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
-Widget appIconCard(String title, String url, String image) {
+Widget appIconCard(
+    String title, String url, String image, BuildContext context) {
   return Padding(
     padding: EdgeInsets.all(5.0),
     child: GestureDetector(
       onTap: () {
-        print('Most used tapped');
+        Navigator.pushNamed(context, '/appScreen', arguments: {
+          "appName": title,
+          "appUrl": url.toString(),
+          "appLogo": image.toString(),
+        });
       },
       child: Column(
         children: <Widget>[
@@ -30,7 +35,7 @@ Widget appIconCard(String title, String url, String image) {
                     image,
                     height: 50.0,
                   ),
-                  padding: EdgeInsets.all(7.0)),
+                  padding: EdgeInsets.all(8.0)),
             ),
           ),
           Padding(

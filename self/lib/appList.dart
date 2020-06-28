@@ -15,12 +15,6 @@ class _AppListState extends State<AppList> {
       'Number of active users per month: 1.59 billion approximately',
     ],
     [
-      'Telegram',
-      'https://web.telegram.org/',
-      'https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/telegram-512.png',
-      'Facebook, Inc. is an American social media conglomerate corporation based in Menlo Park, California.',
-    ],
-    [
       'Gmail',
       'https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin',
       'https://image.flaticon.com/icons/png/512/281/281769.png',
@@ -35,7 +29,7 @@ class _AppListState extends State<AppList> {
     [
       'Twitter',
       'http://twitter.com/',
-      'https://elementarylibrarian.com/wp-content/uploads/2013/11/twitter-bird-white-on-blue.png',
+      'https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png',
       'Number of active users per month: 320 million approximately'
     ],
     [
@@ -49,6 +43,12 @@ class _AppListState extends State<AppList> {
       'http://youtube.com/',
       'https://www.newsfolo.com/wp-content/uploads/2017/08/youtube.jpg',
       'Number of active users per month: 2 billion approximately'
+    ],
+    [
+      'Telegram',
+      'https://web.telegram.org/',
+      'https://4.bp.blogspot.com/-IUDvPAuE9Rg/XE9Muo_8D-I/AAAAAAAAHdE/vDGQsIXh4GM8qdInx9AHPq984Q9P4BEQgCK4BGAYYCw/s1600/Icon-Telegram.png',
+      'Facebook, Inc. is an American social media conglomerate corporation based in Menlo Park, California.',
     ],
   ];
   @override
