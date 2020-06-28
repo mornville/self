@@ -42,7 +42,7 @@ List social = [
     'Telegram',
     'https://web.telegram.org/',
     'https://4.bp.blogspot.com/-IUDvPAuE9Rg/XE9Muo_8D-I/AAAAAAAAHdE/vDGQsIXh4GM8qdInx9AHPq984Q9P4BEQgCK4BGAYYCw/s1600/Icon-Telegram.png',
-    'Facebook, Inc. is an American social media conglomerate corporation based in Menlo Park, California.',
+    'Number of active users per month: 24 million approximately'
   ],
 ];
 
