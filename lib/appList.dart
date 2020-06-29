@@ -112,6 +112,18 @@ class _AppListState extends State<AppList> {
       'https://pluspng.com/img-png/logo-flipkart-png-flipkart-coupons-discount-offers-promo-codes-200.png',
       'Arround 200 million registered users.'
     ],
+    [
+      'Snapdeal',
+      'https://www.snapdeal.com/',
+      'https://i.pinimg.com/originals/b4/1c/d2/b41cd2259fae83ce40e1e848c3c7d1b7.png',
+      'Around 110 million active users per month.'
+    ],
+    [
+      'Club Factory',
+      'https://www.clubfactory.com/',
+      'https://lh3.googleusercontent.com/W6wSm0MxO778oVPFqSLlhN69q323mNoVOC_ibpWhRE4T_-QXJgFHuFQyHjK7MCOglQ',
+      'Around 100 million active users per month.'
+    ],
   ];
   List temp;
   @override

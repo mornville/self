@@ -54,16 +54,28 @@ List topApps = [
 
 List favourites = [
   [
-    'Gmail',
-    'https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin',
-    'https://image.flaticon.com/icons/png/512/281/281769.png',
-    'Number of active users per month: 1 billion approximately',
+    'Inshorts',
+    'https://inshorts.com/en/read',
+    'https://www.mediainfoline.com/wp-content/uploads/2015/12/Inshorts-Logo.png',
+    'Around 1 million readers every month.',
   ],
   [
     'Instagram',
     'http://www.instagram.com/',
     'https://makeawebsitehub.com/wp-content/uploads/2016/05/instagram.png',
     'Number of active users per month: 400 million approximately',
+  ],
+  [
+    'Cricbuzz',
+    'https://www.cricbuzz.com/',
+    'https://lh3.googleusercontent.com/3z09fC48t4igPsjnohFu1Zbm1POROtwBRR4pAC4ZpDR5ZCyf0xIx3e3oHAZjdhivgQ',
+    'Around 13 million total users.'
+  ],
+  [
+    'Youtube',
+    'http://youtube.com/',
+    'https://www.newsfolo.com/wp-content/uploads/2017/08/youtube.jpg',
+    'Number of active users per month: 2 billion approximately'
   ],
   [
     'Twitter',
@@ -222,7 +234,7 @@ class _DashboardState extends State<Dashboard> {
                         context),
                     Padding(
                         child: Text(
-                          'FAVOURITE APPS',
+                          'YOUR FAVOURITE APPS',
                           style: TextStyle(
                               color: Colors.green,
                               fontWeight: FontWeight.w700,
