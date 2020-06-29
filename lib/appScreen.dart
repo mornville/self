@@ -21,9 +21,12 @@ class _AppScreenState extends State<AppScreen> {
         withJavascript: true,
         hidden: true,
         initialChild: Container(
-          color: Colors.transparent,
+          color: Colors.white,
           child: Center(
-            child: CircularProgressIndicator(),
+            child: Image.asset(
+              'assets/loading.gif',
+              height: 150.0,
+            ),
           ),
         ),
         bottomNavigationBar: BottomAppBar(

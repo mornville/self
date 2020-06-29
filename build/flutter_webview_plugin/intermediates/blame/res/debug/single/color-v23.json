@@ -1,38 +1,38 @@
 [
     {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_edittext.xml"
-    },
-    {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
         "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_spinner.xml"
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/home/ashutosh/Desktop/Projects/SELF/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
         "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/ashutosh/Desktop/Projects/self/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/ashutosh/.gradle/caches/transforms-2/files-2.1/56a772d0e147a2bfda48e96bff655148/appcompat-1.1.0/res/color-v23/abc_tint_spinner.xml"
     }
 ]

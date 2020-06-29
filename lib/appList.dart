@@ -11,7 +11,7 @@ class _AppListState extends State<AppList> {
     [
       'Facebook',
       'https://www.facebook.com/',
-      'https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png',
+      'https://www.nicepng.com/png/full/10-104828_facebook-android-icon-facebook-app-logo-transparent.png',
       'Number of active users per month: 1.59 billion approximately',
     ],
     [
@@ -53,18 +53,6 @@ class _AppListState extends State<AppList> {
   ];
   List news = [
     [
-      'BBC World News',
-      'https://www.bbc.com/news',
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1',
-      'Around 140 million global readers every month.',
-    ],
-    [
-      'Fox News',
-      'https://www.foxnews.com/',
-      'https://newsroom.mattressfirm.com/wp-content/uploads/2019/01/300x300xFox-news-logo.png,qx16551.pagespeed.ic.OAfuiuNo3H.png',
-      'Around 200 million global readers every month.',
-    ],
-    [
       'Inshorts',
       'https://inshorts.com/en/read',
       'https://www.mediainfoline.com/wp-content/uploads/2015/12/Inshorts-Logo.png',
@@ -73,8 +61,20 @@ class _AppListState extends State<AppList> {
     [
       'NDTV',
       'https://www.ndtv.com/',
-      'https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1409992116/n7lxsxm5mwgpsjrg2ng5.png',
+      'https://lh3.googleusercontent.com/oMM2LtXhM8WWgMIVUz-oXWkaywRAnOJzCZBsYOpyuVg6yuWhKekeA-oXbzbTQKHgGuAa',
       'Around 100 thousand viewers every month.',
+    ],
+    [
+      'BBC World News',
+      'https://www.bbc.com/news',
+      'https://lh3.googleusercontent.com/Iip-8Yn3PLAzecCMb4ZaHTvFObl3ETUWZmd5zLflhbB6BXKyNc5aM4hrGAA9NXSs7i0',
+      'Around 140 million global readers every month.',
+    ],
+    [
+      'Fox News',
+      'https://www.foxnews.com/',
+      'https://newsroom.mattressfirm.com/wp-content/uploads/2019/01/300x300xFox-news-logo.png,qx16551.pagespeed.ic.OAfuiuNo3H.png',
+      'Around 200 million global readers every month.',
     ],
   ];
 
@@ -90,7 +90,13 @@ class _AppListState extends State<AppList> {
       'https://www.espn.in/',
       'https://a.espncdn.com/espnAppLP/us_en/images/1-appicon.png',
       'Around 6 million users a year.'
-    ]
+    ],
+    [
+      'Yahoo Sports',
+      'https://sports.yahoo.com/',
+      'https://s.yimg.com/cv/apiv2/myc/sports/Sports_icon_0919_250x252.png',
+      'Around 10 million users in the course of many years.'
+    ],
   ];
 
   List shopping = [
