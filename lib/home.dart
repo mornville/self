@@ -95,7 +95,7 @@ class _DashboardState extends State<Dashboard> {
             floatingActionButton: FloatingActionButton.extended(
               elevation: 4.0,
               label: Text(
-                'About the Dev.',
+                'My Favourite Apps',
                 style: TextStyle(fontFamily: 'OpenSans', letterSpacing: 0.0),
               ),
               onPressed: () {

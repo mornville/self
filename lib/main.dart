@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Smitty LLC Application',
+      title: 'SELF - An All in One App',
       theme: ThemeData(
         primarySwatch: Colors.grey,
         primaryColor: Color.fromRGBO(1, 45, 138, 1),
