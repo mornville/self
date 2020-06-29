@@ -1,16 +1,23 @@
-# self
+# Self
+An all in one mobile application having social, shopping, news and sports apps in one place!
 
-SELF - everything in one place.
+# Flutter App Screenshots
+### Dashboard
+<img src="images/ss1.jpg" width=270 height=530>
 
-## Getting Started
+### Social Media Apps
+<img src="images/ss2.jpg" width=270 height=530>
 
-This project is a starting point for a Flutter application.
+### Shopping Apps
+<img src="images/ss3.jpg" width=270 height=530>
 
-A few resources to get you started if this is your first Flutter project:
+### Sports Apps
+<img src="images/ss4.jpg" width=270 height=530>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### News Apps
+<img src="images/ss5.jpg" width=270 height=530>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# External Plugin used
+<a href="https://pub.dev/packages/flutter_webview_plugin">flutter_webview_plugin 0.3.11</a>
+ 
