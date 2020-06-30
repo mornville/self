@@ -31,8 +31,8 @@ Widget appIconCard(
                     ),
               ),
               child: Padding(
-                  child: Image.network(
-                    image,
+                  child: Image.asset(
+                    'assets/appIcons/' + image,
                     height: 50.0,
                   ),
                   padding: EdgeInsets.all(8.0)),

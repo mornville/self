@@ -3,87 +3,56 @@ import 'package:self/widgets.dart' as widgets;
 
 List topApps = [
   [
+    'Flipkart',
+    'https://www.flipkart.com/',
+    'flipkart.png',
+    'Arround 200 million registered users.'
+  ],
+  [
+    'Inshorts',
+    'https://inshorts.com/en/read',
+    'inshorts.png',
+    'Around 1 million readers every month.',
+  ],
+  [
+    'Facebook',
+    'https://www.facebook.com/',
+    'facebook.png',
+    'Number of active users per month: 1.59 billion approximately',
+  ],
+  [
     'Gmail',
     'https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin',
-    'https://image.flaticon.com/icons/png/512/281/281769.png',
+    'gmail.png',
     'Number of active users per month: 1 billion approximately',
   ],
   [
     'Instagram',
     'http://www.instagram.com/',
-    'https://makeawebsitehub.com/wp-content/uploads/2016/05/instagram.png',
+    'instagram.png',
     'Number of active users per month: 400 million approximately',
   ],
   [
-    'Twitter',
-    'http://twitter.com/',
-    'https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png',
-    'Number of active users per month: 320 million approximately'
-  ],
-  [
-    'Inshorts',
-    'https://inshorts.com/en/read',
-    'https://www.mediainfoline.com/wp-content/uploads/2015/12/Inshorts-Logo.png',
-    'Around 1 million readers every month.',
+    'Youtube',
+    'http://youtube.com/',
+    'youtube.png',
+    'Number of active users per month: 2 billion approximately'
   ],
   [
     'Cricbuzz',
     'https://www.cricbuzz.com/',
-    'https://lh3.googleusercontent.com/3z09fC48t4igPsjnohFu1Zbm1POROtwBRR4pAC4ZpDR5ZCyf0xIx3e3oHAZjdhivgQ',
+    'cricbuzz.png',
     'Around 13 million total users.'
   ],
   [
     'Amazon',
     'https://www.amazon.in/',
-    'https://mllh7z7bitrc.i.optimole.com/jHdOZSo-M3dBIfGf/w:216/h:216/q:75/dpr:2.6/https://tinuiti.com/wp-content/uploads/legacysitecontent/cpcs/posts_01/2016/06/Amazon-Shopping-App-Logo-Android.png',
+    'amazon.png',
     'Around 150 million registered users.'
-  ],
-  [
-    'Flipkart',
-    'https://www.flipkart.com/',
-    'https://pluspng.com/img-png/logo-flipkart-png-flipkart-coupons-discount-offers-promo-codes-200.png',
-    'Arround 200 million registered users.'
-  ],
-  [
-    'Facebook',
-    'https://www.facebook.com/',
-    'https://www.nicepng.com/png/full/10-104828_facebook-android-icon-facebook-app-logo-transparent.png',
-    'Number of active users per month: 1.59 billion approximately',
   ],
 ];
 
-List favourites = [
-  [
-    'Inshorts',
-    'https://inshorts.com/en/read',
-    'https://www.mediainfoline.com/wp-content/uploads/2015/12/Inshorts-Logo.png',
-    'Around 1 million readers every month.',
-  ],
-  [
-    'Instagram',
-    'http://www.instagram.com/',
-    'https://makeawebsitehub.com/wp-content/uploads/2016/05/instagram.png',
-    'Number of active users per month: 400 million approximately',
-  ],
-  [
-    'Cricbuzz',
-    'https://www.cricbuzz.com/',
-    'https://lh3.googleusercontent.com/3z09fC48t4igPsjnohFu1Zbm1POROtwBRR4pAC4ZpDR5ZCyf0xIx3e3oHAZjdhivgQ',
-    'Around 13 million total users.'
-  ],
-  [
-    'Youtube',
-    'http://youtube.com/',
-    'https://www.newsfolo.com/wp-content/uploads/2017/08/youtube.jpg',
-    'Number of active users per month: 2 billion approximately'
-  ],
-  [
-    'Twitter',
-    'http://twitter.com/',
-    'https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png',
-    'Number of active users per month: 320 million approximately'
-  ],
-];
+List favourites = [];
 
 class Dashboard extends StatefulWidget {
   @override
