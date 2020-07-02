@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:self/widgets.dart' as widgets;
+import 'addQuickAccessApps.dart' as af;
 
 List topApps = [
   [
@@ -60,6 +61,15 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  // Function to create full screen dialog for adding favorites
+  void _openAddFullDialog() {
+    Navigator.of(context).push(new MaterialPageRoute<Null>(
+        builder: (BuildContext context) {
+          return af.AddFavourite();
+        },
+        fullscreenDialog: true));
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -76,11 +86,11 @@ class _DashboardState extends State<Dashboard> {
             floatingActionButton: FloatingActionButton.extended(
               elevation: 4.0,
               label: Text(
-                'My Favourite Apps',
+                'Quick Access',
                 style: TextStyle(fontFamily: 'OpenSans', letterSpacing: 0.0),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/reportHealth');
+                _openAddFullDialog();
               },
             ),
             bottomNavigationBar: BottomAppBar(
@@ -147,13 +157,72 @@ class _DashboardState extends State<Dashboard> {
                   children: <Widget>[
                     Padding(
                         child: Text(
+                          'QUICK ACCESS',
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15.0),
+                        ),
+                        padding:
+                            EdgeInsets.only(top: 0.0, left: 10.0, bottom: 0.0)),
+                    favourites.isEmpty
+                        ? Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              Padding(
+                                  child: RichText(
+                                    text: TextSpan(
+                                      text: 'No Apps Added,  ',
+                                      style: TextStyle(
+                                          color: Colors.black54,
+                                          fontSize: 15.0,
+                                          fontWeight: FontWeight.w300),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                            text: 'Add Some',
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13.0,
+                                                fontWeight: FontWeight.w700)),
+                                      ],
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.only(
+                                      top: 10.0, left: 10.0, bottom: 10.0)),
+                              IconButton(
+                                icon: Icon(Icons.add_circle_outline),
+                                onPressed: () {
+                                  _openAddFullDialog();
+                                },
+                              ),
+                            ],
+                          )
+                        : Container(
+                            height: 120.0,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: favourites.length,
+                              itemBuilder: (context, i) {
+                                return Container(
+                                    width: 80.0,
+                                    child: widgets.appIconCard(
+                                        favourites[i][0],
+                                        favourites[i][1],
+                                        favourites[i][2],
+                                        context));
+                              },
+                            ),
+                          ),
+                    Padding(
+                        child: Text(
                           'TOP USED APPS',
                           style: TextStyle(
                               color: Colors.green,
                               fontWeight: FontWeight.w700,
                               fontSize: 15.0),
                         ),
-                        padding: EdgeInsets.only(left: 10.0, bottom: 5.0)),
+                        padding: EdgeInsets.only(
+                            left: 10.0, bottom: 5.0, top: 30.0)),
                     Container(
                       height: 120.0,
                       child: ListView.builder(
@@ -201,48 +270,6 @@ class _DashboardState extends State<Dashboard> {
                         'a',
                         'news',
                         context),
-                    Padding(
-                        child: Text(
-                          'YOUR FAVOURITE APPS',
-                          style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 15.0),
-                        ),
-                        padding: EdgeInsets.only(
-                            top: 30.0, left: 10.0, bottom: 10.0)),
-                    favourites.isEmpty
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-                                  child: Text(
-                                    'No favourites added',
-                                    style: TextStyle(
-                                        color: Colors.black54,
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.w300),
-                                  ),
-                                  padding: EdgeInsets.only(
-                                      top: 10.0, left: 10.0, bottom: 10.0)),
-                            ],
-                          )
-                        : Container(
-                            height: 120.0,
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemCount: favourites.length,
-                              itemBuilder: (context, i) {
-                                return Container(
-                                    width: 80.0,
-                                    child: widgets.appIconCard(
-                                        favourites[i][0],
-                                        favourites[i][1],
-                                        favourites[i][2],
-                                        context));
-                              },
-                            ),
-                          ),
                   ],
                 ),
               ),
