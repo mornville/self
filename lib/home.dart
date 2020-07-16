@@ -45,45 +45,46 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {
-          FocusScopeNode currentFocus = FocusScope.of(context);
+      onTap: () {
+        FocusScopeNode currentFocus = FocusScope.of(context);
 
-          if (!currentFocus.hasPrimaryFocus) {
-            currentFocus.unfocus();
-          }
-        },
-        child: Scaffold(
-            floatingActionButtonLocation:
-                FloatingActionButtonLocation.centerDocked,
-            floatingActionButton: FloatingActionButton.extended(
-              elevation: 4.0,
-              label: Text(
-                'Add Quick Access',
-                style: TextStyle(fontFamily: 'OpenSans', letterSpacing: 0.0),
-              ),
-              onPressed: () {
-                _openAddFullDialog();
-              },
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
+      },
+      child: Scaffold(
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
+          floatingActionButton: FloatingActionButton.extended(
+            elevation: 4.0,
+            label: Text(
+              'Add Quick Access',
+              style: TextStyle(fontFamily: 'OpenSans', letterSpacing: 0.0),
             ),
-            bottomNavigationBar: BottomAppBar(
-              elevation: 10.0,
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  FlatButton(
-                    onPressed: () {},
-                    child: Padding(
-                        child: Container(
-                          height: 30.0,
-                        ),
-                        padding: EdgeInsets.only(
-                            top: 8.0, left: 0.0, right: 8.0, bottom: 10.0)),
-                  ),
-                ],
-              ),
+            onPressed: () {
+              _openAddFullDialog();
+            },
+          ),
+          bottomNavigationBar: BottomAppBar(
+            elevation: 10.0,
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                FlatButton(
+                  onPressed: () {},
+                  child: Padding(
+                      child: Container(
+                        height: 30.0,
+                      ),
+                      padding: EdgeInsets.only(
+                          top: 8.0, left: 0.0, right: 8.0, bottom: 10.0)),
+                ),
+              ],
             ),
-            body: NestedScrollView(
+          ),
+          body: WillPopScope(
+            child: NestedScrollView(
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) {
                 return <Widget>[
@@ -235,6 +236,31 @@ class _DashboardState extends State<Dashboard> {
                   ],
                 ),
               ),
-            )));
+            ),
+            onWillPop: _onBackPressed,
+          )),
+    );
+  }
+
+  Future<bool> _onBackPressed() {
+    return showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text('Are you sure?'),
+            content: Text('Do you want to exit an App'),
+            actions: <Widget>[
+              GestureDetector(
+                onTap: () => Navigator.of(context).pop(false),
+                child: Text("NO"),
+              ),
+              SizedBox(height: 16),
+              GestureDetector(
+                onTap: () => Navigator.of(context).pop(true),
+                child: Text("YES"),
+              ),
+            ],
+          ),
+        ) ??
+        false;
   }
 }

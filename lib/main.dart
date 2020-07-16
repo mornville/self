@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:self/home.dart' as home;
 import 'package:self/appList.dart' as appList;
 import 'package:self/appScreen.dart' as appScreen;
+import 'package:self/splash.dart' as splash;
 
 void main() {
   runApp(MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         dividerColor: Colors.white54,
       ),
       home: Material(
-        child: home.Dashboard(),
+        child: splash.SplashScreen(),
       ),
       routes: {
         '/appScreen': (context) => appScreen.AppScreen(),
