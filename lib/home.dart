@@ -97,6 +97,7 @@ class _DashboardState extends State<Dashboard> {
                           fontSize: 20.0,
                           fontWeight: FontWeight.w700),
                     ),
+                    leading: Container(),
                     flexibleSpace: Container(
                       decoration: BoxDecoration(
                           color: Colors.white,

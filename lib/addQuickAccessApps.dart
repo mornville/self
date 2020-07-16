@@ -31,6 +31,7 @@ class _AddFavouriteState extends State<AddFavourite> {
       prefs.setStringList('favAppLogo', favouritesAppLogo);
       prefs.setStringList('favAppLink', favouritesAppLink);
       getFavList();
+      Navigator.pushReplacementNamed(context, '/home');
     } catch (e) {
       print('Error: ' + (e).toString());
     }

@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/appScreen': (context) => appScreen.AppScreen(),
         '/appList': (context) => appList.AppList(),
+        '/home': (context) => home.Dashboard()
       },
     );
   }
