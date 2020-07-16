@@ -29,13 +29,27 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(
         children: <Widget>[
           Container(
-            color: Color.fromRGBO(14, 30, 47, 1),
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: Center(
-              child: Image.asset('assets/ball.png'),
-            ),
-          ),
+              color: Colors.grey[300],
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Image.asset(
+                      'assets/appstore.png',
+                      height: 200,
+                    ),
+                    SizedBox(
+                      height: 50.0,
+                    ),
+                    Image.asset(
+                      'assets/splashLoading.gif',
+                      height: 70,
+                    ),
+                  ],
+                ),
+              )),
         ],
       ),
     );
