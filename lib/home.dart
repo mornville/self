@@ -10,14 +10,17 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  List<String> favourites = [];
+  List<String> favouritesAppNames = [];
+  List<String> favouritesAppLogo = [];
+  List<String> favouritesAppLink = [];
 
-  Future<List> getFavList() async {
+  Future<void> getFavList() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     try {
       setState(() {
-        favourites = prefs.getStringList('favList');
-        print(favourites);
+        favouritesAppNames = prefs.getStringList('favAppNames');
+        favouritesAppLogo = prefs.getStringList('favAppLogo');
+        favouritesAppLink = prefs.getStringList('favAppLink');
       });
     } catch (e) {
       print(e);
@@ -134,7 +137,7 @@ class _DashboardState extends State<Dashboard> {
                         ),
                         padding:
                             EdgeInsets.only(top: 0.0, left: 10.0, bottom: 0.0)),
-                    favourites == null
+                    favouritesAppNames == null
                         ? Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
@@ -167,13 +170,18 @@ class _DashboardState extends State<Dashboard> {
                             ],
                           )
                         : Container(
-                            height: 120.0,
+                            height: 130.0,
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
-                              itemCount: favourites.length,
+                              itemCount: favouritesAppNames.length,
                               itemBuilder: (context, i) {
                                 return Container(
-                                    width: 80.0, child: Text(favourites[i]));
+                                    width: 80.0,
+                                    child: widgets.appIconCard(
+                                        favouritesAppNames[i],
+                                        favouritesAppLogo[i],
+                                        favouritesAppLink[i],
+                                        context));
                               },
                             ),
                           ),

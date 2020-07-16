@@ -134,7 +134,7 @@ List sports = [
     'Around 6 million users a year.'
   ],
   [
-    'Yahoo Sports',
+    'Yahoo',
     'https://sports.yahoo.com/',
     'yahooSports.png',
     'Around 10 million users in the course of many years.'
@@ -159,11 +159,5 @@ List shopping = [
     'https://www.snapdeal.com/',
     'snapdeal.png',
     'Around 110 million active users per month.'
-  ],
-  [
-    'Club Factory',
-    'https://www.clubfactory.com/',
-    'clubFactory.png',
-    'Around 100 million active users per month.'
   ],
 ];

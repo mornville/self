@@ -42,6 +42,7 @@ Widget appIconCard(
             padding: EdgeInsets.all(5.0),
             child: Text(
               title,
+              softWrap: true,
               style: TextStyle(
                   color: Colors.black54,
                   fontSize: 12.0,

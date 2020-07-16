@@ -10,32 +10,45 @@ class AddFavourite extends StatefulWidget {
 class _AddFavouriteState extends State<AddFavourite> {
   List searchResult = List<Widget>();
   bool showTopSearches = false;
-  List<String> favourites = [];
+  List<String> favouritesAppNames = [];
+  List<String> favouritesAppLogo = [];
+  List<String> favouritesAppLink = [];
   List allApps = news + sports + social + shopping;
-  Future<void> addToFavList(String appName) async {
+  Future<void> addToFavList(
+      String appName, String appLogo, String appLink) async {
     // Adding new app name to favourites
     SharedPreferences prefs = await SharedPreferences.getInstance();
     try {
-      if (!favourites.contains(appName)) {
-        favourites.add(appName);
+      if (!favouritesAppNames.contains(appName)) {
+        favouritesAppNames.add(appName);
+        favouritesAppLogo.add(appLogo);
+        favouritesAppLink.add(appLink);
       } else {
         print('Already exists');
       }
-      prefs.setStringList('favList', (favourites));
+      prefs.setStringList('favAppNames', favouritesAppNames);
+      prefs.setStringList('favAppLogo', favouritesAppLogo);
+      prefs.setStringList('favAppLink', favouritesAppLink);
       getFavList();
     } catch (e) {
       print('Error: ' + (e).toString());
     }
   }
 
-  Future<List> getFavList() async {
+  Future<void> getFavList() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     try {
-      if (prefs.containsKey('favList')) {
-        setState(() {
-          favourites = prefs.getStringList("favList");
-        });
-      }
+      setState(() {
+        favouritesAppNames = prefs.getStringList('favAppNames') == null
+            ? []
+            : prefs.getStringList('favAppNames');
+        favouritesAppLogo = prefs.getStringList('favAppLogo') == null
+            ? []
+            : prefs.getStringList('favAppLogo');
+        favouritesAppLink = prefs.getStringList('favAppLink') == null
+            ? []
+            : prefs.getStringList('favAppLink');
+      });
     } catch (e) {
       print(e);
     }
@@ -82,7 +95,8 @@ class _AddFavouriteState extends State<AddFavourite> {
                             padding: EdgeInsets.all(3.0),
                             child: ListTile(
                               onTap: () {
-                                addToFavList(allApps[i][0]);
+                                addToFavList(allApps[i][0], allApps[i][1],
+                                    allApps[i][2]);
                               },
                               title: Text(allApps[i][0]),
                               leading: Image.asset(
@@ -119,21 +133,24 @@ class _AddFavouriteState extends State<AddFavourite> {
                               title: Text(topApps[0][0]),
                               leading: Icon(Icons.history),
                               onTap: () {
-                                addToFavList(topApps[0][0]);
+                                addToFavList(topApps[0][0], topApps[0][1],
+                                    topApps[0][2]);
                               },
                             ),
                             ListTile(
                               title: Text(topApps[1][0]),
                               leading: Icon(Icons.history),
                               onTap: () {
-                                addToFavList(topApps[1][0]);
+                                addToFavList(topApps[1][0], topApps[1][1],
+                                    topApps[1][2]);
                               },
                             ),
                             ListTile(
                               title: Text(topApps[2][0]),
                               leading: Icon(Icons.history),
                               onTap: () {
-                                addToFavList(topApps[2][0]);
+                                addToFavList(topApps[2][0], topApps[2][1],
+                                    topApps[2][2]);
                               },
                             ),
                           ],
