@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:self/data.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AddFavourite extends StatefulWidget {
   @override
@@ -9,7 +10,42 @@ class AddFavourite extends StatefulWidget {
 class _AddFavouriteState extends State<AddFavourite> {
   List searchResult = List<Widget>();
   bool showTopSearches = false;
+  List<String> favourites = [];
   List allApps = news + sports + social + shopping;
+  Future<void> addToFavList(String appName) async {
+    // Adding new app name to favourites
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    try {
+      if (!favourites.contains(appName)) {
+        favourites.add(appName);
+      } else {
+        print('Already exists');
+      }
+      prefs.setStringList('favList', (favourites));
+      getFavList();
+    } catch (e) {
+      print('Error: ' + (e).toString());
+    }
+  }
+
+  Future<List> getFavList() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    try {
+      if (prefs.containsKey('favList')) {
+        setState(() {
+          favourites = prefs.getStringList("favList");
+        });
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getFavList();
+  }
 
   TextEditingController searchBarContent = TextEditingController();
   @override
@@ -45,6 +81,9 @@ class _AddFavouriteState extends State<AddFavourite> {
                           searchResult.add(Padding(
                             padding: EdgeInsets.all(3.0),
                             child: ListTile(
+                              onTap: () {
+                                addToFavList(allApps[i][0]);
+                              },
                               title: Text(allApps[i][0]),
                               leading: Image.asset(
                                 'assets/appIcons/' + allApps[i][2],
@@ -79,14 +118,23 @@ class _AddFavouriteState extends State<AddFavourite> {
                             ListTile(
                               title: Text(topApps[0][0]),
                               leading: Icon(Icons.history),
+                              onTap: () {
+                                addToFavList(topApps[0][0]);
+                              },
                             ),
                             ListTile(
                               title: Text(topApps[1][0]),
                               leading: Icon(Icons.history),
+                              onTap: () {
+                                addToFavList(topApps[1][0]);
+                              },
                             ),
                             ListTile(
                               title: Text(topApps[2][0]),
                               leading: Icon(Icons.history),
+                              onTap: () {
+                                addToFavList(topApps[2][0]);
+                              },
                             ),
                           ],
                         ),

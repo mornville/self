@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:self/widgets.dart' as widgets;
 import 'addQuickAccessApps.dart' as af;
 import 'package:self/data.dart';
-
-List favourites = [];
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -11,6 +10,26 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  List<String> favourites = [];
+
+  Future<List> getFavList() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    try {
+      setState(() {
+        favourites = prefs.getStringList('favList');
+        print(favourites);
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getFavList();
+  }
+
   // Function to create full screen dialog for adding favorites
   void _openAddFullDialog() {
     Navigator.of(context).push(new MaterialPageRoute<Null>(
@@ -115,7 +134,7 @@ class _DashboardState extends State<Dashboard> {
                         ),
                         padding:
                             EdgeInsets.only(top: 0.0, left: 10.0, bottom: 0.0)),
-                    favourites.isEmpty
+                    favourites == null
                         ? Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
@@ -154,12 +173,7 @@ class _DashboardState extends State<Dashboard> {
                               itemCount: favourites.length,
                               itemBuilder: (context, i) {
                                 return Container(
-                                    width: 80.0,
-                                    child: widgets.appIconCard(
-                                        favourites[i][0],
-                                        favourites[i][1],
-                                        favourites[i][2],
-                                        context));
+                                    width: 80.0, child: Text(favourites[i]));
                               },
                             ),
                           ),
