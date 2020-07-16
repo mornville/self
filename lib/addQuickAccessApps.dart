@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:self/data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:self/widgets.dart' as widgets;
 
 class AddFavourite extends StatefulWidget {
   @override
@@ -48,6 +49,7 @@ class _AddFavouriteState extends State<AddFavourite> {
         favouritesAppLink = prefs.getStringList('favAppLink') == null
             ? []
             : prefs.getStringList('favAppLink');
+        print(favouritesAppLink);
       });
     } catch (e) {
       print(e);
@@ -123,50 +125,15 @@ class _AddFavouriteState extends State<AddFavourite> {
                   ),
                 ),
               ),
-              (showTopSearches && searchResult.isEmpty)
-                  ? Padding(
-                      child: Container(
-                        color: Colors.black12,
-                        child: Column(
-                          children: <Widget>[
-                            ListTile(
-                              title: Text(topApps[0][0]),
-                              leading: Icon(Icons.history),
-                              onTap: () {
-                                addToFavList(topApps[0][0], topApps[0][1],
-                                    topApps[0][2]);
-                              },
-                            ),
-                            ListTile(
-                              title: Text(topApps[1][0]),
-                              leading: Icon(Icons.history),
-                              onTap: () {
-                                addToFavList(topApps[1][0], topApps[1][1],
-                                    topApps[1][2]);
-                              },
-                            ),
-                            ListTile(
-                              title: Text(topApps[2][0]),
-                              leading: Icon(Icons.history),
-                              onTap: () {
-                                addToFavList(topApps[2][0], topApps[2][1],
-                                    topApps[2][2]);
-                              },
-                            ),
-                          ],
-                        ),
-                      ),
-                      padding: EdgeInsets.all(0.0),
-                    )
-                  : Expanded(
-                      child: Container(
-                      color: Colors.white,
-                      child: ListView.builder(
-                          itemCount: searchResult.length,
-                          itemBuilder: (BuildContext ctxt, i) {
-                            return searchResult[i];
-                          }),
-                    ))
+              Expanded(
+                  child: Container(
+                color: Colors.white,
+                child: ListView.builder(
+                    itemCount: searchResult.length,
+                    itemBuilder: (BuildContext ctxt, i) {
+                      return searchResult[i];
+                    }),
+              ))
             ],
           ),
         ));

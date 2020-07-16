@@ -58,7 +58,7 @@ class _DashboardState extends State<Dashboard> {
             floatingActionButton: FloatingActionButton.extended(
               elevation: 4.0,
               label: Text(
-                'Quick Access',
+                'Add Quick Access',
                 style: TextStyle(fontFamily: 'OpenSans', letterSpacing: 0.0),
               ),
               onPressed: () {
@@ -74,22 +74,11 @@ class _DashboardState extends State<Dashboard> {
                   FlatButton(
                     onPressed: () {},
                     child: Padding(
-                        child: Image.asset(
-                          'assets/info.png',
+                        child: Container(
                           height: 30.0,
                         ),
                         padding: EdgeInsets.only(
                             top: 8.0, left: 0.0, right: 8.0, bottom: 10.0)),
-                  ),
-                  FlatButton(
-                    onPressed: () {},
-                    child: Padding(
-                        child: Image.asset(
-                          'assets/favourite.png',
-                          height: 30.0,
-                        ),
-                        padding: EdgeInsets.only(
-                            top: 8.0, left: 8.0, right: 0.0, bottom: 10.0)),
                   ),
                 ],
               ),
@@ -194,7 +183,7 @@ class _DashboardState extends State<Dashboard> {
                               fontSize: 15.0),
                         ),
                         padding: EdgeInsets.only(
-                            left: 10.0, bottom: 5.0, top: 30.0)),
+                            left: 10.0, bottom: 5.0, top: 10.0)),
                     Container(
                       height: 120.0,
                       child: ListView.builder(
