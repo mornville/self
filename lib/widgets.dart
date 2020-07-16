@@ -15,12 +15,12 @@ Widget appIconCard(
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.all(5.0),
+            padding: EdgeInsets.all(2.0),
             child: Container(
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
+                    color: Colors.grey[300].withOpacity(0.2),
                     spreadRadius: 2,
                     blurRadius: 2,
                     offset: Offset(0, 1), // changes position of shadow
