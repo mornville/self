@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(
         children: <Widget>[
           Container(
-              color: Colors.grey[300],
+              color: Colors.white,
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Center(

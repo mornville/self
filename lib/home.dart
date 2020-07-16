@@ -245,18 +245,30 @@ class _DashboardState extends State<Dashboard> {
   Future<bool> _onBackPressed() {
     return showDialog(
           context: context,
-          builder: (context) => AlertDialog(
+          builder: (BuildContext context) => AlertDialog(
             title: Text('Are you sure?'),
-            content: Text('Do you want to exit an App'),
+            content: Text('Do you want to exit the app'),
             actions: <Widget>[
-              GestureDetector(
-                onTap: () => Navigator.of(context).pop(false),
-                child: Text("NO"),
+              FlatButton(
+                child: Text("BACK",
+                    style: TextStyle(
+                        color: Colors.black54,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w700)),
+                onPressed: () {
+                  Navigator.of(context).pop(false);
+                },
               ),
-              SizedBox(height: 16),
-              GestureDetector(
-                onTap: () => Navigator.of(context).pop(true),
-                child: Text("YES"),
+              SizedBox(height: 14),
+              FlatButton(
+                child: Text("CLOSE",
+                    style: TextStyle(
+                        color: Colors.black54,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w700)),
+                onPressed: () {
+                  Navigator.of(context).pop(true);
+                },
               ),
             ],
           ),
