@@ -23,6 +23,6 @@ An all in one mobile application having social, shopping, news and sports apps i
 <a href="https://pub.dev/packages/flutter_webview_plugin">flutter_webview_plugin 0.3.11</a>
  
 # Todo
-- Implementing Favourite Section
+- ~~Implementing Favourite Section~~
 - Implementing Most used apps for every user
 - Notifications
