@@ -17,12 +17,14 @@ class _AppListState extends State<AppList> {
       temp = social;
     } else if (data['category'] == 'news') {
       temp = news;
+    } else if (data['category'] == 'food') {
+      temp = food;
     } else if (data['category'] == 'shopping') {
       temp = shopping;
     } else if (data['category'] == 'sports') {
       temp = sports;
     } else {
-      temp = [[], [], [], []];
+      temp = [[], [], [], [], []];
     }
     return Scaffold(
       appBar: AppBar(
@@ -31,7 +33,11 @@ class _AppListState extends State<AppList> {
             ? 'Social Apps'
             : data['category'] == 'news'
                 ? 'News'
-                : data['category'] == 'sports' ? 'Sports' : 'Shopping Apps'),
+                : data['category'] == 'food'
+                    ? 'Online Delivery'
+                    : data['category'] == 'sports'
+                        ? 'Sports'
+                        : 'Shopping Apps'),
       ),
       body: ListView.builder(
         itemCount: temp.length,

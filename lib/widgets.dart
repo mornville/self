@@ -93,9 +93,11 @@ Widget categoryCard(String title, String info, String icon, String category,
                         ? 'radio.png'
                         : category == 'sports'
                             ? 'ball.png'
-                            : category == 'social'
-                                ? 'thumb-up.png'
-                                : 'shopping-cart.png'),
+                            : category == 'food'
+                                ? 'food.png'
+                                : category == 'social'
+                                    ? 'thumb-up.png'
+                                    : 'shopping-cart.png'),
                 height: 50.0,
               ),
               padding: EdgeInsets.only(

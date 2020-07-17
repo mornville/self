@@ -221,6 +221,8 @@ class _DashboardState extends State<Dashboard> {
                         'a',
                         'shopping',
                         context),
+                    widgets.categoryCard('Online Food Delivery',
+                        "Zomato, Swiggy and more.", 'a', 'food', context),
                     widgets.categoryCard(
                         'Sports',
                         "Cricbuzz, Espn, Yahoo Sports and more.",

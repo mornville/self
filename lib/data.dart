@@ -161,3 +161,36 @@ List shopping = [
     'Around 110 million active users per month.'
   ],
 ];
+
+List food = [
+  [
+    'Zomato',
+    'https://www.zomato.com/ncr',
+    'zomato.png',
+    'Around 80 million active users per month.'
+  ],
+  [
+    'Swiggy',
+    'https://www.swiggy.com/',
+    'swiggy.png',
+    'Around 100 million active users per month.'
+  ],
+  [
+    'Dominos',
+    'https://m.dominos.co.in/',
+    'dominos.png',
+    'Around 110 million active users per month.'
+  ],
+  [
+    'Pizza Hut',
+    'https://www.pizzahut.co.in/',
+    'pizza.png',
+    'Around 90 million active users per month.'
+  ],
+  [
+    'McDonalds',
+    'https://www.mcdelivery.co.in/home',
+    'mcd.png',
+    'Around 70 million active users per month.'
+  ]
+];

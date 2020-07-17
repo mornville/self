@@ -14,7 +14,7 @@ class _AddFavouriteState extends State<AddFavourite> {
   List<String> favouritesAppNames = [];
   List<String> favouritesAppLogo = [];
   List<String> favouritesAppLink = [];
-  List allApps = news + sports + social + shopping;
+  List allApps = news + sports + social + shopping + food;
   Future<void> addToFavList(
       String appName, String appLogo, String appLink) async {
     // Adding new app name to favourites
