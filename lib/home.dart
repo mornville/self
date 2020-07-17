@@ -115,16 +115,29 @@ class _DashboardState extends State<Dashboard> {
                 ];
               },
               body: Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                 child: ListView(
                   children: <Widget>[
                     Padding(
-                        child: Text(
-                          'QUICK ACCESS',
-                          style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 15.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text(
+                              'QUICK ACCESS',
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 15.0),
+                            ),
+                            IconButton(
+                              icon: Icon(
+                                Icons.add_circle_outline,
+                                size: 20.0,
+                              ),
+                              onPressed: () {
+                                _openAddFullDialog();
+                              },
+                            ),
+                          ],
                         ),
                         padding:
                             EdgeInsets.only(top: 0.0, left: 10.0, bottom: 0.0)),
@@ -152,12 +165,6 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                   padding: EdgeInsets.only(
                                       top: 10.0, left: 10.0, bottom: 10.0)),
-                              IconButton(
-                                icon: Icon(Icons.add_circle_outline),
-                                onPressed: () {
-                                  _openAddFullDialog();
-                                },
-                              ),
                             ],
                           )
                         : Container(
@@ -169,10 +176,11 @@ class _DashboardState extends State<Dashboard> {
                                 return Container(
                                     width: 80.0,
                                     child: widgets.appIconCard(
-                                        favouritesAppNames[i],
-                                        favouritesAppLogo[i],
-                                        favouritesAppLink[i],
-                                        context));
+                                      favouritesAppNames[i],
+                                      favouritesAppLogo[i],
+                                      favouritesAppLink[i],
+                                      context,
+                                    ));
                               },
                             ),
                           ),
@@ -263,9 +271,9 @@ class _DashboardState extends State<Dashboard> {
               ),
               SizedBox(height: 14),
               FlatButton(
-                child: Text("CLOSE",
+                child: Text("EXIT",
                     style: TextStyle(
-                        color: Colors.black54,
+                        color: Colors.indigo,
                         fontSize: 14.0,
                         fontWeight: FontWeight.w700)),
                 onPressed: () {

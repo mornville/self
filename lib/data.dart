@@ -12,22 +12,28 @@ List topApps = [
     'Around 1 million readers every month.',
   ],
   [
-    'Facebook',
-    'https://www.facebook.com/',
-    'facebook.png',
-    'Number of active users per month: 1.59 billion approximately',
+    'Zomato',
+    'https://www.zomato.com/ncr',
+    'zomato.png',
+    'Around 80 million active users per month.'
   ],
   [
-    'Gmail',
-    'https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin',
-    'gmail.png',
-    'Number of active users per month: 1 billion approximately',
+    'Dominos',
+    'https://m.dominos.co.in/',
+    'dominos.png',
+    'Around 110 million active users per month.'
   ],
   [
     'Instagram',
     'http://www.instagram.com/',
     'instagram.png',
     'Number of active users per month: 400 million approximately',
+  ],
+  [
+    'Gmail',
+    'https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin',
+    'gmail.png',
+    'Number of active users per month: 1 billion approximately',
   ],
   [
     'Youtube',
