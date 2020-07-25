@@ -88,16 +88,16 @@ Widget categoryCard(String title, String info, String icon, String category,
           ),
           trailing: Padding(
               child: Image.asset(
-                'assets/' +
+                'assets/appIcons/' +
                     (category == 'news'
-                        ? 'radio.png'
+                        ? 'bbc.png'
                         : category == 'sports'
-                            ? 'ball.png'
+                            ? 'cricbuzz.png'
                             : category == 'food'
-                                ? 'food.png'
+                                ? 'swiggy.png'
                                 : category == 'social'
-                                    ? 'thumb-up.png'
-                                    : 'shopping-cart.png'),
+                                    ? 'facebook.png'
+                                    : 'amazon.png'),
                 height: 50.0,
               ),
               padding: EdgeInsets.only(
