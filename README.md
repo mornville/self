@@ -32,3 +32,5 @@ An all in one mobile application having social, shopping, news and sports apps i
 - Implementing Most used apps for every user
 - Notifications
 - Adding location permissions for webView
+- Adding DRM for online streaming apps
+
