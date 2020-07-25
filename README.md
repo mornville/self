@@ -1,6 +1,6 @@
 # Self
-An all in one mobile application having social, shopping, news and sports apps in one place!
-
+An all in one mobile application having social, shopping, news and sports apps in one place!<br>
+<a href="https://play.google.com/store/apps/details?id=com.mornville.self"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="200px"></a>
 # Flutter App Screenshots
 ### Dashboard
 <img src="images/2.jpg" width=270 height=530>
