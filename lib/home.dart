@@ -224,6 +224,12 @@ class _DashboardState extends State<Dashboard> {
                         'social',
                         context),
                     widgets.categoryCard(
+                        'Online Streaming',
+                        "Netflix, Hotstar, Hulu and more.",
+                        'a',
+                        'stream',
+                        context),
+                    widgets.categoryCard(
                         'Shopping Apps',
                         "Flipkart, Snapdeal, Amazon and more.",
                         'a',

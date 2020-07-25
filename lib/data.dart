@@ -201,7 +201,7 @@ List food = [
   ]
 ];
 
-List onlineStream = [
+List stream = [
   [
     'Netflix',
     'https://www.netflix.com/in/login',

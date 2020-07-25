@@ -23,6 +23,8 @@ class _AppListState extends State<AppList> {
       temp = shopping;
     } else if (data['category'] == 'sports') {
       temp = sports;
+    } else if (data['category'] == 'stream') {
+      temp = stream;
     } else {
       temp = [[], [], [], [], []];
     }
@@ -33,11 +35,13 @@ class _AppListState extends State<AppList> {
             ? 'Social Apps'
             : data['category'] == 'news'
                 ? 'News'
-                : data['category'] == 'food'
-                    ? 'Online Delivery'
-                    : data['category'] == 'sports'
-                        ? 'Sports'
-                        : 'Shopping Apps'),
+                : data['category'] == 'stream'
+                    ? 'Online Streaming'
+                    : data['category'] == 'food'
+                        ? 'Online Delivery'
+                        : data['category'] == 'sports'
+                            ? 'Sports'
+                            : 'Shopping Apps'),
       ),
       body: ListView.builder(
         itemCount: temp.length,

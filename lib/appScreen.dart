@@ -29,31 +29,6 @@ class _AppScreenState extends State<AppScreen> {
             ),
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.arrow_back_ios),
-                onPressed: () {
-                  flutterWebViewPlugin.goBack();
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.refresh),
-                onPressed: () {
-                  flutterWebViewPlugin.reload();
-                },
-              ),
-              IconButton(
-                icon: const Icon(Icons.arrow_forward_ios),
-                onPressed: () {
-                  flutterWebViewPlugin.goForward();
-                },
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }

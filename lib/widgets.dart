@@ -93,11 +93,13 @@ Widget categoryCard(String title, String info, String icon, String category,
                         ? 'bbc.png'
                         : category == 'sports'
                             ? 'cricbuzz.png'
-                            : category == 'food'
-                                ? 'swiggy.png'
-                                : category == 'social'
-                                    ? 'facebook.png'
-                                    : 'amazon.png'),
+                            : category == 'stream'
+                                ? 'priveVideo.svg'
+                                : category == 'food'
+                                    ? 'swiggy.png'
+                                    : category == 'social'
+                                        ? 'facebook.png'
+                                        : 'amazon.png'),
                 height: 50.0,
               ),
               padding: EdgeInsets.only(
