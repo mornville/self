@@ -3,7 +3,10 @@ An all in one mobile application having social, shopping, news and sports apps i
 
 # Flutter App Screenshots
 ### Dashboard
-<img src="images/ss1.jpg" width=270 height=530>
+<img src="images/2.jpg" width=270 height=530>
+
+### Add Quick Access Apps
+<img src="images/3.jpg" width=270 height=530>
 
 ### Social Media Apps
 <img src="images/ss2.jpg" width=270 height=530>
@@ -21,8 +24,11 @@ An all in one mobile application having social, shopping, news and sports apps i
 
 # External Plugin used
 <a href="https://pub.dev/packages/flutter_webview_plugin">flutter_webview_plugin 0.3.11</a>
- 
+
+<a href="https://pub.dev/packages/shared_preferences">shared_preferences 0.5.8</a>
+
 # Todo
 - ~~Implementing Favourite Section~~
 - Implementing Most used apps for every user
 - Notifications
+- Adding location permissions for webView
