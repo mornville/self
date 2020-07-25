@@ -18,10 +18,10 @@ List topApps = [
     'Around 80 million active users per month.'
   ],
   [
-    'Dominos',
-    'https://m.dominos.co.in/',
-    'dominos.png',
-    'Around 110 million active users per month.'
+    'Netflix',
+    'https://www.netflix.com/in/login',
+    'netflix.jpg',
+    'Around 500 million active users per month.'
   ],
   [
     'Instagram',
@@ -199,4 +199,31 @@ List food = [
     'mcd.png',
     'Around 70 million active users per month.'
   ]
+];
+
+List onlineStream = [
+  [
+    'Netflix',
+    'https://www.netflix.com/in/login',
+    'netflix.jpg',
+    'Around 500 million active users per month.'
+  ],
+  [
+    'Hotstar',
+    'https://www.hotstar.com/',
+    'hotstar.png',
+    'Around 20 million active users per month.'
+  ],
+  [
+    'Prime Video',
+    'https://www.primevideo.com/',
+    'primeVideo.svg',
+    'Around 200 million active users per month.'
+  ],
+  [
+    'Hulu',
+    'https://www.hulu.com/',
+    'hulu.png',
+    'Around 20 million active users per month.'
+  ],
 ];
